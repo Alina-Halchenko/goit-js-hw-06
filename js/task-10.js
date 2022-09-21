@@ -40,13 +40,13 @@ function createBoxes(amount) {
       newDiv.style.height = `${size}px`;
       newDiv.style.marginBottom = '5px';
       newDiv.style.backgroundColor = getRandomHexColor();
-      console.table('newDiv', newDiv)
+      // console.table('newDiv', newDiv);
       return newDiv;
       });
 
-    console.log('newAr', newAr);
+    // console.log('newAr', newAr);
     containerDiv.append(...newAr);
-    console.table("containerDiv", containerDiv);
+    // console.table("containerDiv", containerDiv);
     return containerDiv;
 
 };
@@ -55,6 +55,7 @@ function createBoxes(amount) {
 function destroyBoxes() {
   console.log('here is my destroyBoxes');
   containerDiv.innerHTML = '';
+  divsToAdd = []
 }
 
 
