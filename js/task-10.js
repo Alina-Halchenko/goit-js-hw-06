@@ -47,6 +47,7 @@ function createBoxes(amount) {
     // console.log('newAr', newAr);
     containerDiv.append(...newAr);
     // console.table("containerDiv", containerDiv);
+    divsToAdd = [];
     return containerDiv;
 
 };
@@ -55,7 +56,7 @@ function createBoxes(amount) {
 function destroyBoxes() {
   console.log('here is my destroyBoxes');
   containerDiv.innerHTML = '';
-  divsToAdd = []
+  divsToAdd = [];
 }
 
 
