@@ -36,8 +36,9 @@ function createBoxes(amount) {
     const newAr = divsToAdd
     .map(size => 
       {const newDiv = document.createElement('div');
-      newDiv.width = size;
-      newDiv.height = size;
+      newDiv.style.width = `${size}px`;
+      newDiv.style.height = `${size}px`;
+      newDiv.style.marginBottom = '5px';
       newDiv.style.backgroundColor = getRandomHexColor();
       console.table('newDiv', newDiv)
       return newDiv;
