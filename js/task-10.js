@@ -41,11 +41,13 @@ function createBoxes(amount) {
       newDiv.style.backgroundColor = getRandomHexColor();
       console.table('newDiv', newDiv)
       return newDiv;
-      })
-    .join("");
+      });
 
     console.log('newAr', newAr);
-    return containerDiv.append(...newAr);
+    containerDiv.append(...newAr);
+    console.table("containerDiv", containerDiv);
+    return containerDiv;
+
 };
 
 
@@ -54,5 +56,5 @@ function destroyBoxes() {
   containerDiv.innerHTML = '';
 }
 
-console.table("containerDiv", containerDiv);
+
 // `<div width = "${size}" height = "${size}"></div>` - створює діви з правильним розміром
