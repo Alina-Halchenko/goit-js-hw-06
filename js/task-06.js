@@ -5,9 +5,12 @@ const validation = document.inputEl
 inputEl.addEventListener('blur', onInputBlur);
 
 function onInputBlur(evt){
+  console.log(Number(inputEl.getAttribute('data-length')));
+  console.log(evt.currentTarget.value.trim().length);
   // console.log(evt.currentTarget.value.trim().length);
-  if (inputEl.getAttribute('data-length') == evt.currentTarget.value.trim().length) {
+  if (Number(inputEl.getAttribute('data-length')) === evt.currentTarget.value.trim().length) {
     // console.log("all good")
+    inputEl.classList.remove('invalid');
     inputEl.classList.add('valid');
   } else {
     // console.log('not good');
